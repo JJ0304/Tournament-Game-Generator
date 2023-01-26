@@ -10,8 +10,8 @@ def get_number_of_teams():
     return num_teams
 
 
-    def get_team_names(num_teams):
-        team_names = []
+def get_team_names(num_teams):
+    team_names = []
 
     for idx in range(num_teams):
         while True:
