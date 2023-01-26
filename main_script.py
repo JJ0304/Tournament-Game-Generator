@@ -40,4 +40,24 @@ def get_number_of_games_played(num_teams):
 
         print("Invalid number of games. Each team plays each other at least once in the regular season, try again.")
 
-    return games_played    
+    return games_played
+
+
+def get_team_wins(team_names, games_played):
+    team_wins = []
+
+    for team in team_names:
+        while True:
+            wins = int(input(f"Enter the number of wins Team {team} had: "))
+
+            if wins > games_played:
+                print(
+                    f"The maximum number of wins is {games_played}, try again.")
+            elif wins < 0:
+                print("The minimum number of wins is 0, try again.")
+            else:
+                break
+
+        team_wins.append((team, wins))
+
+    return team_wins        
